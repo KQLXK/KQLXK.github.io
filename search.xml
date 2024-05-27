@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>[c++]模板</title>
+      <link href="/2024/05/27/c-%E6%A8%A1%E6%9D%BF/"/>
+      <url>/2024/05/27/c-%E6%A8%A1%E6%9D%BF/</url>
+      
+        <content type="html"><![CDATA[<h1 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h1><h2 id="函数模板与模板函数"><a href="#函数模板与模板函数" class="headerlink" title="函数模板与模板函数"></a>函数模板与模板函数</h2><ul><li><p><strong>适用场景</strong>：对处理逻辑相同，只是参数类型不同的函数</p></li><li><p><strong>声明</strong>：</p><p>template &lt;typename 类型参数名&gt;</p><p>返回值类型 函数模板名(形参表);</p><p>或</p><p>template &lt;typename 类型参数名1， typename 类型参数名2， …..&gt;</p><p>返回值类型  函数模板名(形参表);</p></li><li><p><strong>定义</strong>：</p><p>template &lt;typename 类型参数名&gt;</p><p>返回值类型 函数模板名(形参表){</p><p>​….     &#x2F;&#x2F;函数模板体</p><p>}</p><p>或</p><p>template &lt;typename 类型参数名1， typename 类型参数名2， …..&gt;</p><p>返回值类型  函数模板名(形参表){</p><p>​……     &#x2F;&#x2F;函数模板体</p><p>}</p></li><li><p><strong>示例</strong>：</p><p>定义一个返回数组最小值的函数模板：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function">T <span class="title">MinInArray</span><span class="params">(T* array, <span class="type">int</span> size)</span> </span>&#123;</span><br><span class="line">    T min = array[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; size; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (array[i] &lt; min) &#123;</span><br><span class="line">            min = array[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> min;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p><strong>优先级</strong>：</p><p>当函数模板和重载函数同时存在时，编译器会优先使用重载函数。</p></li></ul><h1 id="类模板"><a href="#类模板" class="headerlink" title="类模板"></a>类模板</h1><ul><li><p><strong>声明和定义</strong>：</p><ul><li><p><strong>类的声明定义</strong>：</p><p>template &lt;typename 类型参数名1，…..&gt;</p><p>class 类模板名</p><p>{</p><p>​…… &#x2F;&#x2F;类模板体</p><p>}；</p><p>示例：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyTemplateClass</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    T data;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构造函数</span></span><br><span class="line">    <span class="built_in">MyTemplateClass</span>(T value) : <span class="built_in">data</span>(value) &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 成员函数</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">display</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        std::cout &lt;&lt; <span class="string">&quot;Data: &quot;</span> &lt;&lt; data &lt;&lt; std::endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p><strong>类的成员函数</strong>：</p><p>template&lt;typename 类型参数名1，…..&gt;</p><p>返回值类型  类模板名&lt;类型参数名&gt;::成员函数名（形参表）{</p><p>​…..   &#x2F;&#x2F;函数体</p><p>}</p><p>示例：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="type">void</span> MyTemplateClass&lt;T&gt;::<span class="built_in">display</span>() &#123;</span><br><span class="line">    std::cout &lt;&lt; <span class="string">&quot;Data: &quot;</span> &lt;&lt; data &lt;&lt; std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p><strong>用类模板产生模板类</strong>：</p><p>类模板名 &lt;类型1，…..&gt; </p><p>示例：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    </span><br></pre></td></tr></table></figure></li><li><p><strong>类模板建立对象</strong>：</p><p>类模板名 &lt;类型参数名&gt; 对象1，对象2…….</p><p>示例：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyTemplateClass&lt;<span class="type">int</span>&gt; obj1,obj2........</span><br></pre></td></tr></table></figure></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+          <category> c++基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[c++]运算符重载</title>
       <link href="/2024/05/17/c-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/"/>
       <url>/2024/05/17/c-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/</url>
