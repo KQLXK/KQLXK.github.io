@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>[Go]gin框架基本使用</title>
+      <link href="/2024/09/16/Go-gin%E6%A1%86%E6%9E%B6%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
+      <url>/2024/09/16/Go-gin%E6%A1%86%E6%9E%B6%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>官方文档：<a href="https://gin-gonic.com/zh-cn/docs/">文档 | Gin Web Framework (gin-gonic.com)</a></p><h1 id="基本的gin示例">基本的gin示例</h1><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line"><span class="string">&quot;github.com/gin-gonic/gin&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">sayHello</span><span class="params">(c *gin.Context)</span></span> &#123;</span><br><span class="line">c.JSON(<span class="number">200</span>, gin.H&#123;</span><br><span class="line"><span class="string">&quot;message&quot;</span>: <span class="string">&quot;hello golang!&quot;</span>,</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">r := gin.Default()</span><br><span class="line"></span><br><span class="line">r.GET(<span class="string">&quot;/hello&quot;</span>, sayHello)</span><br><span class="line"></span><br><span class="line">r.Run()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Go </category>
+          
+          <category> gin框架 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Go </tag>
+            
+            <tag> gin框架 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[git]基本使用</title>
       <link href="/2024/09/13/git-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/"/>
       <url>/2024/09/13/git-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
