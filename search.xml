@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>[Go]模板与渲染</title>
+      <link href="/2024/09/24/Go-%E6%A8%A1%E6%9D%BF%E4%B8%8E%E6%B8%B2%E6%9F%93/"/>
+      <url>/2024/09/24/Go-%E6%A8%A1%E6%9D%BF%E4%B8%8E%E6%B8%B2%E6%9F%93/</url>
+      
+        <content type="html"><![CDATA[<h1 id="概述">概述</h1><ol><li>导包：<code>text/template</code>，<code>html/template</code>，前面文本模板，后面html模板</li><li>作用：一个html文件中需要使用到会改变的各种后端传送的数据和不会改变的html基本架构，在html文件中用模板语言标记出这些数据要在的地方，渲染就是将数据填入，可以理解为一种文本替换操作</li><li>通常定义为 .tmpl 和 .tpl，必须使用UTF-8编码</li><li>传给模板的数据用包裹起来</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Go </category>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Go </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>[计网]互联网协议入门</title>
       <link href="/2024/09/19/%E8%AE%A1%E7%BD%91-%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE%E5%85%A5%E9%97%A8/"/>
       <url>/2024/09/19/%E8%AE%A1%E7%BD%91-%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%8F%E8%AE%AE%E5%85%A5%E9%97%A8/</url>
