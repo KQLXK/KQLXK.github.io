@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>[第六届字节青训营]L5-打开抖音会发生什么 | YC's Blog</title><meta name="author" content="Ycccccc"><meta name="copyright" content="Ycccccc"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="刷抖音是怎么交互的 为了方便理解满分为网络接入和网络传输 网络接入 互联网 物理联通：  路由 路由发包原理：   同网段：配置网段即可默认添加静态路由。获取对端MAC直接发包。(这里的同网段个人理解为一个子网络内)   跨网段：配置网关路由。获取网关MAC地址发包给网关(gateway)   动态路由：BGP&#x2F;OSPF等，路由表在动态变化   路由是网状的，不一定是对称的   ARP协议 作用：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[第六届字节青训营]L5-打开抖音会发生什么">
+<meta property="og:url" content="https://kqlxk.github.io/2024/11/10/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L5-%E6%89%93%E5%BC%80%E6%8A%96%E9%9F%B3%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88/index.html">
+<meta property="og:site_name" content="YC&#39;s Blog">
+<meta property="og:description" content="刷抖音是怎么交互的 为了方便理解满分为网络接入和网络传输 网络接入 互联网 物理联通：  路由 路由发包原理：   同网段：配置网段即可默认添加静态路由。获取对端MAC直接发包。(这里的同网段个人理解为一个子网络内)   跨网段：配置网关路由。获取网关MAC地址发包给网关(gateway)   动态路由：BGP&#x2F;OSPF等，路由表在动态变化   路由是网状的，不一定是对称的   ARP协议 作用：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://kqlxk.github.io/img/mmexport1714538039776.png">
+<meta property="article:published_time" content="2024-11-10T12:14:55.000Z">
+<meta property="article:modified_time" content="2024-11-10T15:12:44.249Z">
+<meta property="article:author" content="Ycccccc">
+<meta property="article:tag" content="青训营">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://kqlxk.github.io/img/mmexport1714538039776.png"><link rel="shortcut icon" href="/img/mmexport1714538039776.png"><link rel="canonical" href="https://kqlxk.github.io/2024/11/10/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L5-%E6%89%93%E5%BC%80%E6%8A%96%E9%9F%B3%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88/index.html"><link rel="preconnect"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css?v=6.5.1"><link rel="stylesheet" href="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.css?v=5.0.33" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: '/pluginsSrc/@egjs/infinitegrid/dist/infinitegrid.min.js?v=4.11.1',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '[第六届字节青训营]L5-打开抖音会发生什么',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-11-10 23:12:44'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/mmexport1714538039776.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/todo/"><i class="fa-fw fas fa-list-alt"></i><span> ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/mmexport1714538039776.png')"><nav id="nav"><span id="blog-info"><a href="/" title="YC's Blog"><span class="site-name">YC's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-book"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/todo/"><i class="fa-fw fas fa-list-alt"></i><span> ToDo</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">[第六届字节青训营]L5-打开抖音会发生什么</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-11-10T12:14:55.000Z" title="发表于 2024-11-10 20:14:55">2024-11-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-11-10T15:12:44.249Z" title="更新于 2024-11-10 23:12:44">2024-11-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9D%92%E8%AE%AD%E8%90%A5/">青训营</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span id="" data-flag-title="[第六届字节青训营]L5-打开抖音会发生什么"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="twikoo_visitors"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="刷抖音是怎么交互的">刷抖音是怎么交互的</h1>
+<p>为了方便理解满分为网络接入和网络传输</p>
+<h2 id="网络接入">网络接入</h2>
+<h3 id="互联网">互联网</h3>
+<p>物理联通：</p>
+<p><img src="https://blog0417.oss-cn-hangzhou.aliyuncs.com/img_for_Blog/202411102027993.webp" alt=""></p>
+<h3 id="路由">路由</h3>
+<p>路由发包原理：</p>
+<ul>
+<li>
+<p>同网段：配置网段即可默认添加静态路由。获取对端MAC直接发包。(这里的同网段个人理解为一个子网络内)</p>
+</li>
+<li>
+<p>跨网段：配置网关路由。获取网关MAC地址发包给网关(gateway)</p>
+</li>
+<li>
+<p>动态路由：BGP/OSPF等，路由表在动态变化</p>
+</li>
+<li>
+<p>路由是网状的，不一定是对称的</p>
+</li>
+</ul>
+<h3 id="arp协议">ARP协议</h3>
+<p><strong>作用</strong>：查找下一个发送目标的MAC地址(同网段情况下)</p>
+<p>ARP协议会向子网络中所有计算机发送一个数据包，包括自己的IP地址和查询主机的IP地址，在对方MAC地址上填<code>FF:FF:FF:FF:FF:FF</code>，每台计算机对IP地址进行比较，如果相同就回复自己的MAC地址</p>
+<p>有几点要注意：</p>
+<ul>
+<li>
+<p>逻辑同网段才能发送ARP</p>
+</li>
+<li>
+<p>ARP请求广播，ARP响应单播</p>
+</li>
+<li>
+<p>免费ARP：主动广播告知MAC地址</p>
+<p>场景：新增加了一台服务器，这台服务器通过广播告诉其他服务器他的MAC地址</p>
+</li>
+<li>
+<p>代理ARP：劫持ARP请求，发往另一个虚拟网络/伪造MAC地址</p>
+<p>场景：A发送ARP请求来请求B的MAC地址，代理ARP在交换机上劫持了这个请求，让另一台服务器C返回他的MAC地址</p>
+</li>
+</ul>
+<h3 id="ip协议">IP协议</h3>
+<ul>
+<li>为什么不能用MAC地址替代IP地址：</li>
+<li>IPv4不够用，一般怎么解决</li>
+</ul>
+<h3 id="nat">NAT</h3>
+<p><strong>是什么</strong>：是一种网络技术，用于将私有IP地址转换为公共IP地址，以便在Internet上进行通信</p>
+<p><strong>作用</strong>：</p>
+<ol>
+<li>节省IP地址：NAT可以让多个内部设备共享一个公共IP地址</li>
+<li>网络安全：通过使用私有IP地址，内部网络的设备不会直接暴露在公共互联网中，这增加了安全性。</li>
+</ol>
+<p><strong>应用</strong>：</p>
+<p>在家庭和企业网络的路由器中非常常见</p>
+<p><img src="https://blog0417.oss-cn-hangzhou.aliyuncs.com/img_for_Blog/202411102127055.webp" alt=""></p>
+<h2 id="网络传输">网络传输</h2>
+<h3 id="数据包">数据包</h3>
+<p><strong>是什么</strong>：本质上是一段内存，里面存储的内存是有序的，一般是按照TCP/IP的多层协议去封装。拆包/封包都是按照协议去写内存/读内存。</p>
+<p>如下图所示：</p>
+<p><img src="https://blog0417.oss-cn-hangzhou.aliyuncs.com/img_for_Blog/202411102208472.png" alt=""></p>
+<h3 id="数据包发送">数据包发送</h3>
+<p><img src="https://blog0417.oss-cn-hangzhou.aliyuncs.com/img_for_Blog/202411102212943.webp" alt=""></p>
+<h3 id="先请求dns">先请求DNS</h3>
+<ol>
+<li>客户端向DNS服务器发送 <code>www.douyin.com</code> 的解析请求</li>
+<li>解析过程是一个递归过程，先从.com开始解析，<a target="_blank" rel="noopener" href="http://xn--douyin-200k179hrt8d.com">在解析douyin.com</a></li>
+<li>最后返回IP地址</li>
+</ol>
+ <img src="https://blog0417.oss-cn-hangzhou.aliyuncs.com/img_for_Blog/202411102223350.webp" style="zoom:80%;" />
+<h3 id="dns的传输协议udp">DNS的传输协议UDP</h3>
+<p>UDP协议就是在数据包中加入了端口号，较为简单，所以是不可靠的</p>
+<p>用好UDP很难，所以一般使用TCP</p>
+<h3 id="tcp三次握手">TCP三次握手</h3>
+<p>三次握手：确认传输的序列号/MSS/Option字段，建立连接</p>
+<p>TCP连接：是一个虚拟的概念，本质上两倍维持一段内存，记录连接状态，就是session</p>
+<p>TCP传输：理解sequence number/acknowledge number</p>
+<p>丢包重传：理解丢包怎么感知并重传，理解快速重传发生在什么时候</p>
+<h3 id="tcp传输">TCP传输</h3>
+<p><strong>两个概念</strong>：</p>
+<p><code>sequence number</code>：表示的是我方(发送方)这边，这个packet的数据部分的第一位应该在整个data stream中所在的位置。</p>
+<p><code>acknowledge number</code>：表示的是期望的对方(接收方)的下一次sequence number是多少注意，SYN/FIN的传输虽然没有data，但是会让下一次传输的packet seq增加一，但是ACK的传输，不会让下一次的传输packet加1</p>
+<p>接下来演示 <code>seq</code> 和 <code>ack</code> 在数据传输过程中的变化</p>
+<p><img src="https://blog0417.oss-cn-hangzhou.aliyuncs.com/img_for_Blog/202411102301221.png" alt=""></p>
+<p><strong>第一个红框框内是TCP三次握手建立连接的过程</strong>：</p>
+<ol>
+<li>客户端发送SYN（Seq = 0），这是建立TCP连接的第一步，告知接收方要建立连接。</li>
+<li>服务端回应SYN, ACK（Seq = 0, Ack = 1）：服务器确认接收到SYN，并同步自己的序列号。</li>
+<li>客户端发送ACK（Seq = 1, Ack = 1）：本地确认收到服务器的SYN, ACK，连接建立完成。</li>
+</ol>
+<p><strong>第二个红框框中是数据传输过程</strong>：</p>
+<ol>
+<li>
+<p>客户端发送PSH, ACK（Seq = 1, Ack = 726）：此时本地已经发送数据，<code>SEQ</code>为1表示发送了1个数据，<code>ACK</code>为726表示确认接收到726字节的数据。</p>
+</li>
+<li>
+<p>服务端回传ACK（Seq = 1, Ack = 726）：确认收到本地的消息。</p>
+</li>
+</ol>
+<h1 id="刷抖音为什么又快又稳">刷抖音为什么又快又稳</h1>
+<h1 id="总结回顾">总结回顾</h1>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://kqlxk.github.io">Ycccccc</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://kqlxk.github.io/2024/11/10/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L5-%E6%89%93%E5%BC%80%E6%8A%96%E9%9F%B3%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88/">https://kqlxk.github.io/2024/11/10/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L5-%E6%89%93%E5%BC%80%E6%8A%96%E9%9F%B3%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://kqlxk.github.io" target="_blank">YC's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%92%E8%AE%AD%E8%90%A5/">青训营</a></div><div class="post_share"><div class="social-share" data-image="/img/mmexport1714538039776.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css?v=1.1.3" media="print" onload="this.media='all'"><script src="/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js?v=1.1.3" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/11/09/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L4-HTTP%E6%A1%86%E6%9E%B6%E4%BF%AE%E7%82%BC%E4%B9%8B%E8%B7%AF/" title="第六届字节青训营]L4-HTTP框架修炼之路"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第六届字节青训营]L4-HTTP框架修炼之路</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2024/11/02/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L1-Go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="[第六届字节青训营]L1-Go语言基础语法"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-02</div><div class="title">[第六届字节青训营]L1-Go语言基础语法</div></div></a></div><div><a href="/2024/11/06/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L3-%E9%AB%98%E8%B4%A8%E9%87%8F%E7%BC%96%E7%A8%8B%E4%B8%8E%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98%E5%AE%9E%E8%B7%B5/" title="[第六届字节青训营]L3-高质量编程与性能调优实践"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-06</div><div class="title">[第六届字节青训营]L3-高质量编程与性能调优实践</div></div></a></div><div><a href="/2024/11/04/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L2-Go%E8%AF%AD%E8%A8%80%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/" title="[第六届字节青训营]L2-Go语言工程实践"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-04</div><div class="title">[第六届字节青训营]L2-Go语言工程实践</div></div></a></div><div><a href="/2024/11/09/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L4-HTTP%E6%A1%86%E6%9E%B6%E4%BF%AE%E7%82%BC%E4%B9%8B%E8%B7%AF/" title="第六届字节青训营]L4-HTTP框架修炼之路"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-11-09</div><div class="title">第六届字节青训营]L4-HTTP框架修炼之路</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/mmexport1714538039776.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Ycccccc</div><div class="author-info__description">Anything Is Possible</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">36</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">16</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/kqlxk" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/yuchao1726199979@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%B7%E6%8A%96%E9%9F%B3%E6%98%AF%E6%80%8E%E4%B9%88%E4%BA%A4%E4%BA%92%E7%9A%84"><span class="toc-number">1.</span> <span class="toc-text">刷抖音是怎么交互的</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E6%8E%A5%E5%85%A5"><span class="toc-number">1.1.</span> <span class="toc-text">网络接入</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%92%E8%81%94%E7%BD%91"><span class="toc-number">1.1.1.</span> <span class="toc-text">互联网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%AF%E7%94%B1"><span class="toc-number">1.1.2.</span> <span class="toc-text">路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#arp%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.1.3.</span> <span class="toc-text">ARP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ip%E5%8D%8F%E8%AE%AE"><span class="toc-number">1.1.4.</span> <span class="toc-text">IP协议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nat"><span class="toc-number">1.1.5.</span> <span class="toc-text">NAT</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E4%BC%A0%E8%BE%93"><span class="toc-number">1.2.</span> <span class="toc-text">网络传输</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%8C%85"><span class="toc-number">1.2.1.</span> <span class="toc-text">数据包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%8C%85%E5%8F%91%E9%80%81"><span class="toc-number">1.2.2.</span> <span class="toc-text">数据包发送</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%88%E8%AF%B7%E6%B1%82dns"><span class="toc-number">1.2.3.</span> <span class="toc-text">先请求DNS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dns%E7%9A%84%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AEudp"><span class="toc-number">1.2.4.</span> <span class="toc-text">DNS的传输协议UDP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="toc-number">1.2.5.</span> <span class="toc-text">TCP三次握手</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tcp%E4%BC%A0%E8%BE%93"><span class="toc-number">1.2.6.</span> <span class="toc-text">TCP传输</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%B7%E6%8A%96%E9%9F%B3%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%88%E5%BF%AB%E5%8F%88%E7%A8%B3"><span class="toc-number">2.</span> <span class="toc-text">刷抖音为什么又快又稳</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%E5%9B%9E%E9%A1%BE"><span class="toc-number">3.</span> <span class="toc-text">总结回顾</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/10/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L5-%E6%89%93%E5%BC%80%E6%8A%96%E9%9F%B3%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88/" title="[第六届字节青训营]L5-打开抖音会发生什么">[第六届字节青训营]L5-打开抖音会发生什么</a><time datetime="2024-11-10T12:14:55.000Z" title="发表于 2024-11-10 20:14:55">2024-11-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/09/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L4-HTTP%E6%A1%86%E6%9E%B6%E4%BF%AE%E7%82%BC%E4%B9%8B%E8%B7%AF/" title="第六届字节青训营]L4-HTTP框架修炼之路">第六届字节青训营]L4-HTTP框架修炼之路</a><time datetime="2024-11-09T06:18:34.000Z" title="发表于 2024-11-09 14:18:34">2024-11-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/06/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L3-%E9%AB%98%E8%B4%A8%E9%87%8F%E7%BC%96%E7%A8%8B%E4%B8%8E%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98%E5%AE%9E%E8%B7%B5/" title="[第六届字节青训营]L3-高质量编程与性能调优实践">[第六届字节青训营]L3-高质量编程与性能调优实践</a><time datetime="2024-11-06T09:08:21.000Z" title="发表于 2024-11-06 17:08:21">2024-11-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/04/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L2-Go%E8%AF%AD%E8%A8%80%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5/" title="[第六届字节青训营]L2-Go语言工程实践">[第六届字节青训营]L2-Go语言工程实践</a><time datetime="2024-11-04T04:51:43.000Z" title="发表于 2024-11-04 12:51:43">2024-11-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/11/02/%E7%AC%AC%E5%85%AD%E5%B1%8A%E5%AD%97%E8%8A%82%E9%9D%92%E8%AE%AD%E8%90%A5-L1-Go%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" title="[第六届字节青训营]L1-Go语言基础语法">[第六届字节青训营]L1-Go语言基础语法</a><time datetime="2024-11-02T05:40:02.000Z" title="发表于 2024-11-02 13:40:02">2024-11-02</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/mmexport1714538039776.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Ycccccc</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/pluginsSrc/@fancyapps/ui/dist/fancybox/fancybox.umd.js?v=5.0.33"></script><div class="js-pjax"><script>(() => {
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://contact4-yuchaos-projects-019f593f.vercel.app/',
+      region: 'ap-hangzhou',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://contact4-yuchaos-projects-019f593f.vercel.app/',
+      region: 'ap-hangzhou',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('/pluginsSrc/twikoo/dist/twikoo.all.min.js?v=1.6.31').then(init)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
